@@ -1,3 +1,13 @@
+#
+
+https://glitch.com/edit/#!/rightful-valley-date
+
+
+use fake account
+https://developers.facebook.com/apps/728675759039413/whatsapp-business/wa-dev-console/?business_id=927175811819484
+
+
+
 # WhatsApp Platform Quick Start
 
 Welcome to your first step toward building awesome WhatsApp apps!
