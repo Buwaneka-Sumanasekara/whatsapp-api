@@ -1,5 +1,8 @@
 const axios = require("axios").default;
 
+const questions = require('./questions.json');
+
+
 const MESSAGE_TYPE = {
   TEXT: "text",
   INTERACTIVE: "interactive",
@@ -8,19 +11,19 @@ const KEYWORD = "HELLO";
 
 const phoneNumber = "119940174385529";
 const URL = `https://graph.facebook.com/v16.0/119940174385529/messages`;
-const token =process.env.WHATSAPP_TOKEN
+const token =`${process.env.WHATSAPP_TOKEN}`
 const office = "BANGLADESH  DHAKA";
 
-const questions = [
-  {
-    question: "Please advice on stability on Air Freight Rate Changes",
-    answers: [
-      { id: 1, title: "No Change" },
-      { id: 2, title: "Rates Increased" },
-      { id: 3, title: "Rates Decreased" },
-    ],
-  },
-];
+// const questions = [
+//   {
+//     question: "Please advice on stability on Air Freight Rate Changes",
+//     answers: [
+//       { id: 1, title: "No Change" },
+//       { id: 2, title: "Rates Increased" },
+//       { id: 3, title: "Rates Decreased" },
+//     ],
+//   },
+// ];
 
 const messageType = "list";
 
@@ -60,6 +63,7 @@ const reqHeader = {
 function sendQuestion(contact, questionIndex = 0) {
   console.log("send initial question to:", contact.wa_id);
 
+  
   const userName = contact.profile.name;
   const questionObj = questions[questionIndex];
 
@@ -92,6 +96,7 @@ function sendQuestion(contact, questionIndex = 0) {
       },
     },
   };
+
 
   axios
     .post(URL, reqBody, reqHeader)
