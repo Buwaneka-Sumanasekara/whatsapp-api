@@ -8,9 +8,7 @@ const KEYWORD = "HELLO";
 
 const phoneNumber = "119940174385529";
 const URL = `https://graph.facebook.com/v16.0/119940174385529/messages`;
-const token =
-  "EAAKWugvGI7UBAJrMoM2ndfyBZAuNd44exC2COZBr82MKNM8Czx7rgpuURmZBT4oZCuv25urrs6bdvQrhM943CgQPukbr0ltH5t5TJK7gCaxc9i194CO4ZAWMm9U79fnxnE44yqS5CdZAdA5oZBZB5UI30ifh5vXP69DDWuzZBZCzq8ZAjvA9IlKScBnj44IZCMvGe0olWFY3KP9KWrhIp2FmZAZA2i";
-
+const token =process.env.WHATSAPP_TOKEN
 const office = "BANGLADESH  DHAKA";
 const questions = [
   {
